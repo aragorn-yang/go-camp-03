@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package user.v1;
+option go_package = "github.com/aragorn-yang/go-camp-03/api/user/v1";
+
+service UserService {
+  rpc GetUserInfo(GetUserInfoRequest) returns (GetUserInfoResponse){}
+}
+
+message GetUserInfoRequest{
+}
+
+message GetUserInfoResponse{
+  string username = 1;
+  string city = 2;
+}
